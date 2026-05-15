@@ -11,7 +11,7 @@ const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/barber_sal
 
 // CHANGE THIS LINE - Add the frontend URL to CORS
 app.use(cors({
-    origin: process.env.FRONTEND_URL || 'https://barborshop.netlify.app/',
+    origin: process.env.FRONTEND_URL || 'https://barborshop.netlify.app',
     credentials: true
 }))
 app.use(express.json())
