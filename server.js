@@ -9,9 +9,9 @@ const app = express()
 const PORT = process.env.PORT || 5000
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/barber_salon'
 
-// CHANGE THIS LINE - Add the frontend URL to CORS
+// FIXED CORS - Hardcoded Netlify URL without trailing slash
 app.use(cors({
-    origin: process.env.FRONTEND_URL || 'https://barborshop.netlify.app',
+    origin: 'https://barborshop.netlify.app',
     credentials: true
 }))
 app.use(express.json())
